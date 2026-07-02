@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 활용 | 선생님들을 위한 웹페이지 제작 도우미</title>
+  <link rel="stylesheet" href="../assets/styles.css?v=20260702-8" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="주요 메뉴">
+      <a class="brand" href="../index.html"><span class="brand-mark">W</span><span>웹페이지 제작 도우미</span></a>
+      <div class="nav-links">
+        <a href="start.html">처음 시작</a>
+        <a href="ideas.html">수업 활용 아이디어</a>
+        <a href="choose.html">도구 고르기</a>
+        <a href="workflow.html">제작 흐름</a>
+        <a href="ai.html" aria-current="page">AI 활용</a>
+        <a href="tools.html">프로그램별 상세 가이드</a>
+        <a href="cases.html">사례 보기</a>
+        <a href="practice.html">실습 워크북</a>
+        <a href="check.html">공개 전 점검</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <span class="eyebrow">AI로 만드는 법</span>
+      <h1>AI와 대화하며 교육용 웹페이지 만들기</h1>
+      <p class="lead">
+        <span class="line-break">이 페이지는 AI에게 어떻게 말하면 좋을지 다룹니다.</span>
+        <span class="line-break">index.html 초안 만들기, 수정하기, 공개 전 점검하기를 차례대로 봅니다.</span>
+        <span class="line-break">웹페이지가 정말 필요한지는 처음 시작 페이지에서 먼저 판단하세요.</span>
+      </p>
+    </section>
+
+    <nav class="page-toc" aria-label="AI 활용 목차">
+      <div class="toc-card">
+        <strong>이 페이지 목차</strong>
+        <div class="toc-links">
+          <a href="#required">1. 필수 안내 확인하기</a>
+          <a href="#ai-safety">2. AI에게 넣지 말아야 할 정보</a>
+          <a href="#vibe">3. 바이브코딩 방식 이해하기</a>
+          <a href="#index">4. index.html 초안 만들기</a>
+          <a href="#case-prompts">5. 사례 기반 프롬프트 활용하기</a>
+          <a href="#codex">6. 기존 사이트 수정·보강하기</a>
+          <a href="#prompts">7. 프롬프트 모음 활용하기</a>
+        </div>
+      </div>
+    </nav>
+
+    <section id="required">
+      <div class="section-inner">
+        <div class="callout">
+          <strong>필수 안내 확인하기</strong>
+          <span class="line-break">AI로 웹페이지를 만들기 전에</span>
+          <span class="line-break"><a href="start.html">처음 시작</a> 페이지에서 “정말 필요한 상황인지” 먼저 판단하세요.</span>
+          <span class="line-break">웹페이지 제작은 필수가 아니라, 수업 흐름을 더 명확하게 만들 때 선택하는 도구입니다.</span>
+          <span class="line-break">공지·과제·성적 관리는 Classroom/LMS가 더 빠를 수 있습니다.</span>
+          <span class="line-break">설문은 Forms/Tally, 정형 퀴즈는 Kahoot/Quizizz/Wordwall이 더 나을 수 있습니다.</span>
+          <span class="line-break">AI 활용은 기존 앱으로 부족한 화면이나 흐름을 만들 때 쓰는 보조 수단으로 보는 것이 안전합니다.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai-safety">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>AI에게 넣지 말아야 할 정보</h2>
+            <p>
+              <span class="line-break">AI는 제작을 도와주는 훌륭한 조력자입니다.</span>
+              <span class="line-break">하지만 실제 학생 정보나 비밀 설정값을 그대로 넣는 곳은 아닙니다.</span>
+              <span class="line-break">질문할 때는 예시 데이터로 바꿔서 물어보는 습관이 필요합니다.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="template-grid">
+          <article class="card rose">
+            <span class="badge">개인정보</span>
+            <h3>실제 학생 정보를 붙여넣지 않기</h3>
+            <p>
+              <span class="line-break">학생 이름, 학번, 성적, 상담 내용은 AI에게 그대로 넣지 않습니다.</span>
+              <span class="line-break">얼굴 사진이나 연락처도 실제 자료 대신 예시로 바꿔 질문합니다.</span>
+            </p>
+            <p class="muted">대신 “학생A”, “1모둠”, “예시 응답”처럼 바꿔 질문합니다.</p>
+          </article>
+          <article class="card gold">
+            <span class="badge">비밀 키</span>
+            <h3>관리자 키와 비밀 API 키 넣지 않기</h3>
+            <p>
+              <span class="line-break">Supabase service role key는 그대로 넣지 않습니다.</span>
+              <span class="line-break">외부 API 비밀 키나 서버 관리자 키도</span>
+              <span class="line-break">코드와 대화창에 붙여넣지 않습니다.</span>
+            </p>
+            <p class="muted">
+              <span class="line-break">키 종류를 모르면</span>
+              <span class="line-break">“이 키를 브라우저 코드에 넣어도 되는지 판단해줘”라고 먼저 물어봅니다.</span>
+            </p>
+          </article>
+          <article class="card blue">
+            <span class="badge">비공개 자료</span>
+            <h3>학교 내부 링크와 문서 권한 확인하기</h3>
+            <p>
+              <span class="line-break">비공개 Drive 문서, 내부 회의 자료, 학생 결과물 링크는</span>
+              <span class="line-break">먼저 공개 범위를 확인합니다.</span>
+              <span class="line-break">AI에게 질문할 때는 예시 링크로 바꿔서 설명합니다.</span>
+            </p>
+            <p class="muted">AI가 만든 페이지에 실제 링크를 넣기 전 학생 계정에서 열리는지 확인합니다.</p>
+          </article>
+        </div>
+
+        <div class="callout">
+          <strong>코드를 받은 뒤 다시 물어볼 말</strong>
+          <pre class="prompt-box">방금 만든 웹페이지 코드를 공개하기 전에 점검해줘.
+
+1. 학생 개인정보가 코드나 화면에 들어갔는지
+2. 공개하면 안 되는 링크나 문구가 있는지
+3. API key나 비밀 키가 브라우저 코드에 들어갔는지
+4. 모바일 화면에서 버튼과 글자가 적절한지
+5. Google Forms, Tally, Drive 링크 권한을 따로 확인해야 하는지
+초보 교사 기준으로 체크리스트를 만들어줘.</pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="vibe">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>바이브코딩 방식 이해하기</h2>
+            <p>
+              <span class="line-break">바이브코딩은 코드를 처음부터 외워서 쓰는 방식이 아닙니다.</span>
+              <span class="line-break">만들고 싶은 결과물을 AI에게 말로 설명하고, 대화하며 수정하는 방식입니다.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="split">
+          <article class="card">
+            <h3>교사가 하는 일</h3>
+            <ul>
+              <li>수업의 목적과 대상을 설명합니다.</li>
+              <li>학생이 어떤 순서로 활동해야 하는지 알려줍니다.</li>
+              <li>활동지, 영상, 제출 링크 등 필요한 자료를 정리합니다.</li>
+              <li>모바일에서 보기 편하게, 버튼을 크게 같은 조건을 말합니다.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>AI가 도와주는 일</h3>
+            <ul>
+              <li>HTML, CSS, JavaScript 초안을 만듭니다.</li>
+              <li>문구를 더 친절하게 다듬습니다.</li>
+              <li>버튼, 카드, 탭 같은 화면 구성을 제안합니다.</li>
+              <li>모바일 화면과 접근성 점검을 도와줍니다.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="index">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>index.html 초안 만들기</h2>
+            <p>
+              <span class="line-break">Netlify, GitHub Pages, Cloudflare Pages처럼</span>
+              <span class="line-break">HTML 파일을 올리는 방식은 먼저 index.html 파일이 필요합니다.</span>
+              <span class="line-break">아래 프롬프트를 복사해 수업 내용만 바꿔보세요.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="split">
+          <article class="card">
+            <h3>AI에게 주면 좋은 정보</h3>
+            <ul>
+              <li>페이지 제목: 예) 우리 동네 인구 변화 분석</li>
+              <li>대상: 예) 고등학교 1학년 통합사회</li>
+              <li>목적: 예) 지역 데이터를 읽고 해석하기</li>
+              <li>활동 순서: 자료 읽기, 분석하기, 발표하기, 제출하기</li>
+              <li>자료 링크: 활동지, 영상, 제출 폼</li>
+              <li>디자인 조건: 모바일 친화적, 큰 버튼, 차분한 색감</li>
+            </ul>
+          </article>
+          <article>
+            <pre class="prompt-box">교육용 웹페이지를 만들고 싶어.
+나는 HTML을 잘 모르는 교사야.
+
+다음 조건으로 index.html 파일 하나에 들어갈 코드를 만들어줘.
+
+주제: 고등학교 1학년 통합사회 수행평가 안내
+대상: 학생과 학부모
+목적: 수행평가 일정, 활동 순서, 제출 방법을 한 화면에서 안내
+
+넣을 내용:
+1. 수행평가 주제
+2. 제출 기한
+3. 활동 순서 4단계
+4. 평가 기준
+5. 활동지 링크 버튼
+6. 제출 링크 버튼
+7. 자주 묻는 질문
+
+요구사항:
+- 스마트폰에서 읽기 편하게
+- 버튼은 크고 명확하게
+- 색감은 차분하고 학교 안내문처럼
+- HTML, CSS, JavaScript를 한 파일에 작성
+- 파일 이름은 index.html로 저장할 수 있게 만들어줘</pre>
+          </article>
+        </div>
+
+        <div class="callout">
+          <strong>템플릿을 보고 AI에게 바꿔 달라고 해도 됩니다</strong>
+          <span class="line-break">처음부터 빈 화면을 설명하기 어렵다면 시작 템플릿을 먼저 열어보세요.</span>
+          <span class="line-break">그다음 “이 안내 페이지 구조를 내 수업 주제로 바꿔줘”처럼 요청하세요.</span>
+          <span class="line-break">템플릿은 구조를 이해하기 위한 예시이며, 실제 수업에서는 링크와 문구를 반드시 바꿔야 합니다.</span>
+          <div class="actions">
+            <a class="btn" href="../templates/guide-page/index.html" target="_blank" rel="noopener">안내 페이지 템플릿</a>
+            <a class="btn" href="../templates/quiz-activity/index.html" target="_blank" rel="noopener">퀴즈 활동 템플릿</a>
+            <a class="btn" href="../templates/map-activity/index.html" target="_blank" rel="noopener">지도 탐색 템플릿</a>
+            <a class="btn" href="../templates/form-hub/index.html" target="_blank" rel="noopener">응답 연결 템플릿</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="case-prompts">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>사례 기반 프롬프트 활용하기</h2>
+            <p>
+              <span class="line-break">사례 보기에서 마음에 드는 결과물을 찾았다면</span>
+              <span class="line-break">그 사례를 내 수업 주제로 바꿔 AI에게 요청하면 됩니다.</span>
+              <span class="line-break">처음부터 완성형 웹앱을 요구하지 않아도 됩니다.</span>
+              <span class="line-break">학생이 해야 할 행동과 공개 범위를 먼저 설명하는 것이 좋습니다.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="template-grid">
+          <article class="card">
+            <span class="badge">안내 페이지</span>
+            <h3>학생 안내 페이지를 만들 때</h3>
+            <pre class="prompt-box">수업 안내 웹페이지를 만들고 싶어.
+대상은 [학년/과목] 학생이야.
+학생이 한 주소에서 [일정, 준비물, 활동 순서, 제출 링크, 자주 묻는 질문]을 확인해야 해.
+
+처음 만드는 교사도 따라 할 수 있게
+1. 첫 화면 문구
+2. 섹션 순서
+3. 버튼 이름
+4. Google Forms나 Classroom 링크를 넣을 자리
+5. 개인정보 주의 문구
+를 포함해서 구성안을 제안해줘.</pre>
+          </article>
+
+          <article class="card blue">
+            <span class="badge">상호작용 활동</span>
+            <h3>기후 탐색 웹앱처럼 만들 때</h3>
+            <pre class="prompt-box">[과목/단원] 탐색형 웹앱을 만들고 싶어.
+학생이 [지역/개념/자료]를 선택하면 설명 카드가 바뀌고,
+비교 질문과 짧은 확인 퀴즈가 나타나면 좋겠어.
+
+조건:
+- HTML, CSS, JavaScript를 한 파일에 넣은 index.html 형태
+- 모바일에서도 버튼과 카드가 잘 보이게
+- 학생 개인정보는 저장하지 않기
+- 마지막에 Google Forms 제출 버튼 자리 만들기
+
+먼저 화면 구성안을 설명하고, 그다음 전체 코드를 만들어줘.</pre>
+          </article>
+
+          <article class="card gold">
+            <span class="badge">응답 분석</span>
+            <h3>교사용 분석 화면을 만들 때</h3>
+            <pre class="prompt-box">학생 응답을 바탕으로 교사용 분석 화면을 만들고 싶어.
+주제는 [예: 여행지리 학습자 분석]이고,
+원자료를 공개하지 않고 요약 지표와 모둠 구성 참고 기준만 보여주고 싶어.
+
+다음 기준으로 제안해줘.
+1. 어떤 응답 항목을 받아야 하는지
+2. 어떤 항목은 받지 않는 것이 안전한지
+3. Google Forms, Tally, Sheets, Canva, HTML 중 어떤 조합이 쉬운지
+4. 공개하면 안 되는 개인정보 예시
+5. 교사용 화면 구성안</pre>
+          </article>
+
+          <article class="card rose">
+            <span class="badge">플랫폼형 자료</span>
+            <h3>자료 탐색 페이지를 만들 때</h3>
+            <pre class="prompt-box">자료가 많은 수업용 탐색 페이지를 만들고 싶어.
+학생이 [자료 유형/주제/난이도]에 따라 필요한 자료를 찾을 수 있어야 해.
+
+처음부터 데이터베이스를 붙이지 않고,
+Google Sites, Notion, Drive 폴더, HTML 카드형 페이지 중 초보 교사에게 맞는 시작 방법을 비교해줘.
+
+가능하면 1차 버전은 안내 페이지,
+2차 버전은 검색·필터,
+3차 버전은 데이터 저장 기능으로 확장하는 흐름으로 제안해줘.</pre>
+          </article>
+        </div>
+
+        <div class="callout">
+          <strong>사례를 그대로 베끼지 않아도 됩니다</strong>
+          <span class="line-break">사례는 완성본이 아니라 출발점입니다.</span>
+          <span class="line-break">“내 수업에서 학생이 무엇을 보고, 무엇을 누르고, 무엇을 남겨야 하는가?”만 바꿔 적으면</span>
+          <span class="line-break">같은 구조를 다른 과목과 활동에도 적용할 수 있습니다.</span>
+          <div class="actions">
+            <a class="btn" href="cases.html">사례 다시 보기</a>
+            <a class="btn" href="practice.html#practice-workbook">실습 워크북 보기</a>
+            <a class="btn primary" href="tools.html">프로그램별 상세 가이드</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="codex">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>기존 사이트 수정·보강하기</h2>
+            <p>
+              <span class="line-break">이미 만든 웹사이트가 있다면 처음부터 다시 만들 필요가 없습니다.</span>
+              <span class="line-break">Codex처럼 파일을 직접 읽고 수정할 수 있는 AI에게 요청할 수 있습니다.</span>
+              <span class="line-break">예: “기존 구조를 유지하면서 필요한 부분만 보강해줘.”</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="template-grid">
+          <article class="card">
+            <span class="badge">기존 구조 유지</span>
+            <h3>디자인을 갈아엎지 않기</h3>
+            <p>
+              <span class="line-break">이미 만든 메뉴, 카드, 탭, 색상 체계를 유지합니다.</span>
+              <span class="line-break">필요한 설명만 늘리도록 요청합니다.</span>
+            </p>
+          </article>
+          <article class="card blue">
+            <span class="badge">파일별 수정</span>
+            <h3>페이지 역할을 나눠 수정하기</h3>
+            <p>
+              <span class="line-break">start.html은 개념, choose.html은 선택 기준을 맡깁니다.</span>
+              <span class="line-break">tools.html은 실제 사용법처럼 파일별 역할을 정해줍니다.</span>
+            </p>
+          </article>
+          <article class="card gold">
+            <span class="badge">도구 설명 추가</span>
+            <h3>프로그램별 내용을 같은 틀로 넣기</h3>
+            <p>
+              <span class="line-break">준비물, 잘 맞는 수업 장면, 한계, 진행 순서를 같은 구조로 넣습니다.</span>
+              <span class="line-break">AI 프롬프트까지 같은 위치에 두면 초보자가 읽기 쉽습니다.</span>
+            </p>
+          </article>
+          <article class="card rose">
+            <span class="badge">수정 후 점검</span>
+            <h3>링크와 탭을 확인하기</h3>
+            <p>
+              <span class="line-break">내비게이션 링크, 목차 이동, 탭 전환을 확인하도록 요청합니다.</span>
+              <span class="line-break">모바일 카드 길이와 개인정보 주의 문구 연결도 함께 점검합니다.</span>
+            </p>
+          </article>
+        </div>
+
+        <h3>Codex에게 줄 수 있는 프롬프트 예시</h3>
+        <pre class="prompt-box">현재 폴더에 있는 정적 웹사이트를 수정해줘.
+대상은 웹페이지 제작이 처음인 교사야.
+
+중요 조건:
+- 기존 디자인과 CSS 클래스를 최대한 유지해줘.
+- 새 도구를 추가하더라도 메뉴 구조가 섞이지 않게 해줘.
+- start.html은 기본 개념과 필요성 판단,
+  choose.html은 도구 선택 기준,
+  tools.html은 프로그램별 실제 사용법,
+  ai.html은 AI 활용법으로 역할을 나눠줘.
+- 학생 개인정보, 공개 범위, 권한 설정 주의 문구를 넣어줘.
+
+수정 후에는 다음을 점검해줘.
+1. 모든 메뉴 링크가 열리는지
+2. 목차 링크가 맞는 위치로 이동하는지
+3. tools.html의 탭 전환이 작동하는지
+4. 모바일 화면에서 카드 내용이 너무 길어지지 않는지
+5. 공개 전 점검 페이지와 개인정보 안내가 연결되는지</pre>
+      </div>
+    </section>
+
+    <section id="prompts">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>프롬프트 모음 활용하기</h2>
+            <p>
+              <span class="line-break">처음 나온 코드가 마음에 들지 않아도 괜찮습니다.</span>
+              <span class="line-break">대화하듯 고쳐달라고 하면 됩니다.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="template-grid">
+          <article class="card">
+            <span class="badge">디자인 수정</span>
+            <h3>화면이 밋밋할 때</h3>
+            <pre class="prompt-box">방금 만든 웹페이지를 더 보기 좋게 수정해줘.
+활동 순서는 카드 형태로 만들고,
+중요한 버튼은 더 크게 보여줘.
+색감은 학교 안내문처럼 차분하게 해줘.</pre>
+          </article>
+          <article class="card">
+            <span class="badge blue">모바일 점검</span>
+            <h3>휴대폰 화면이 걱정될 때</h3>
+            <pre class="prompt-box">이 HTML 코드가 스마트폰에서도 읽기 편한지 점검해줘.
+글자 크기, 버튼 크기, 여백, 가로 넘침 문제가 생기지 않게 수정해줘.</pre>
+          </article>
+          <article class="card">
+            <span class="badge gold">교육용 점검</span>
+            <h3>학생에게 명확한지 확인할 때</h3>
+            <pre class="prompt-box">이 웹페이지가 학생 안내용으로 적절한지 봐줘.
+학생이 무엇을 먼저 해야 하는지,
+어디를 눌러야 하는지,
+제출 방법이 명확한지 점검해줘.</pre>
+          </article>
+          <article class="card">
+            <span class="badge rose">안전 점검</span>
+            <h3>공개 전 확인할 때</h3>
+            <pre class="prompt-box">이 웹페이지를 공개하기 전에 점검해줘.
+학생 개인정보 노출 위험,
+저작권 문제가 될 수 있는 요소,
+공개 범위에서 조심할 점을 알려줘.</pre>
+          </article>
+          <article class="card">
+            <span class="badge">오류 해결</span>
+            <h3>이미지나 버튼이 안 될 때</h3>
+            <pre class="prompt-box">내 웹페이지에서 이미지가 보이지 않아.
+HTML 코드와 파일 구조를 비교해서
+이미지 경로 문제를 초보자도 이해할 수 있게 설명해줘.</pre>
+          </article>
+          <article class="card">
+            <span class="badge blue">다음 단계</span>
+            <h3>배포 방법을 알고 싶을 때</h3>
+            <pre class="prompt-box">이 index.html 파일을 웹에 올리고 싶어.
+Netlify와 GitHub Pages 중 초보 교사에게 어떤 방법이 쉬운지 비교하고,
+내 상황에 맞는 방법을 추천해줘.</pre>
+          </article>
+        </div>
+
+        <div class="callout">
+          <strong>역할 정리</strong>
+          <span class="line-break">이 페이지에서는 AI와 대화하며 `index.html`을 만드는 법을 다룹니다.</span>
+          <span class="line-break">만든 파일을 Netlify, GitHub Pages, Cloudflare Pages 등에 실제로 올리는 방법은</span>
+          <span class="line-break">프로그램별 상세 가이드에서 확인하세요.</span>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="section-inner">
+        <div class="callout">
+          <strong>다음에 볼 페이지</strong>
+          <span class="line-break">AI로 첫 파일을 만들었다면,</span>
+          <span class="line-break">이제 배포 도구와 공개 전 점검을 확인할 차례입니다.</span>
+          <div class="actions">
+            <a class="btn" href="choose.html">도구 고르기</a>
+            <a class="btn primary" href="tools.html">프로그램별 상세 가이드</a>
+            <a class="btn" href="cases.html">사례 보기</a>
+            <a class="btn" href="check.html">공개 전 점검</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-main">
+        <span class="footer-kicker">교육용 웹페이지 제작 가이드북</span>
+        <strong class="footer-title">선생님들을 위한 웹페이지 제작 도우미</strong>
+        <p>
+          <span class="line-break">웹페이지가 목적이 아니라,</span>
+          <span class="line-break">더 효과적인 수업을 위한 선택지로 사용할 수 있도록 정리했습니다.</span>
+        </p>
+      </div>
+      <div class="footer-meta">
+        <p><span>제작자</span> 전남에서 근무하는 지리과 교사</p>
+        <p><span>문의</span> <a href="mailto:28182818@naver.com">28182818@naver.com</a></p>
+      </div>
+      <a class="footer-home" href="../index.html">처음으로</a>
+    </div>
+  </footer>
+  <script src="../assets/app.js?v=20260702-8"></script>
+</body>
+</html>

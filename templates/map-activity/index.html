@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>지도 탐색 활동 템플릿</title>
+  <style>
+    :root {
+      --bg: #f6f7f3;
+      --paper: #ffffff;
+      --ink: #1f2933;
+      --muted: #64748b;
+      --line: #dde5df;
+      --green: #256f5b;
+      --blue: #255f8f;
+      --gold: #946c1f;
+      --soft: #e7f0f8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .badge {
+      display: inline-flex;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #e7f0f8;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 16px 0 10px;
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.15;
+    }
+
+    .lead {
+      max-width: 760px;
+      color: #435363;
+      font-size: 18px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      margin-top: 26px;
+      align-items: start;
+    }
+
+    .map-panel,
+    .info-panel,
+    .notice {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      padding: 18px;
+      box-shadow: 0 12px 30px rgba(31, 41, 51, 0.08);
+    }
+
+    .map-panel {
+      min-height: 360px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(37, 111, 91, 0.16), rgba(37, 95, 143, 0.12)),
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.7) 0 12px, rgba(255,255,255,0.28) 12px 24px);
+    }
+
+    .map-title {
+      margin: 0 0 12px;
+      font-size: 20px;
+    }
+
+    .marker {
+      position: absolute;
+      width: 46px;
+      height: 46px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      background: var(--green);
+      color: #ffffff;
+      font: inherit;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(31, 41, 51, 0.22);
+    }
+
+    .marker:hover,
+    .marker:focus-visible {
+      outline: 4px solid rgba(37, 111, 91, 0.26);
+      transform: translateY(-1px);
+    }
+
+    .marker[data-place="jeju"] {
+      left: 18%;
+      top: 62%;
+    }
+
+    .marker[data-place="seoul"] {
+      left: 44%;
+      top: 24%;
+    }
+
+    .marker[data-place="gangneung"] {
+      left: 72%;
+      top: 34%;
+    }
+
+    .info-panel h2 {
+      margin: 0 0 8px;
+      font-size: 25px;
+    }
+
+    .info-panel p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .prompt {
+      border-radius: 8px;
+      background: var(--soft);
+      padding: 14px;
+      color: #214864;
+      font-weight: 800;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    a.button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 14px;
+      border-radius: 7px;
+      background: var(--green);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    a.button.secondary {
+      background: var(--paper);
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .notice {
+      margin-top: 20px;
+      box-shadow: none;
+      background: #fff2cf;
+    }
+
+    @media (max-width: 780px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .map-panel {
+        min-height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="badge">지도 탐색 활동 템플릿</span>
+    <h1>지역 특징 탐색 활동</h1>
+    <p class="lead">
+      학생이 지도 위 지점을 눌러 지역 특징, 탐구 질문, 정리 활동을 확인하는 기본 템플릿입니다.
+      실제 지도 이미지가 있다면 배경을 이미지로 바꾸고, 지점 버튼의 위치를 조정하면 됩니다.
+    </p>
+
+    <section class="layout">
+      <div class="map-panel" aria-label="지역 선택 지도">
+        <h2 class="map-title">탐색할 지역을 선택하세요</h2>
+        <button class="marker" type="button" data-place="seoul" aria-label="서울 선택">1</button>
+        <button class="marker" type="button" data-place="gangneung" aria-label="강릉 선택">2</button>
+        <button class="marker" type="button" data-place="jeju" aria-label="제주 선택">3</button>
+      </div>
+
+      <article class="info-panel">
+        <h2 id="place-title">서울</h2>
+        <p id="place-desc">수도권의 인구 집중, 교통망, 서비스업 발달을 함께 살펴볼 수 있는 지역입니다.</p>
+        <div class="prompt" id="place-question">탐구 질문: 서울의 기능이 주변 지역과 어떻게 연결되는지 설명해 봅시다.</div>
+        <div class="button-row">
+          <a class="button" href="#">활동지 열기</a>
+          <a class="button secondary" href="#">응답 제출</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="notice">
+      <strong>수업 활용 팁</strong>
+      <p>
+        이 템플릿은 학생 응답을 저장하지 않습니다.
+        학생 의견을 모으려면 응답 제출 버튼에 Google Forms나 Tally 링크를 연결하세요.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    const places = {
+      seoul: {
+        title: "서울",
+        desc: "수도권의 인구 집중, 교통망, 서비스업 발달을 함께 살펴볼 수 있는 지역입니다.",
+        question: "탐구 질문: 서울의 기능이 주변 지역과 어떻게 연결되는지 설명해 봅시다."
+      },
+      gangneung: {
+        title: "강릉",
+        desc: "동해안의 지형, 관광, 해양성 기후의 영향을 함께 탐색하기 좋은 지역입니다.",
+        question: "탐구 질문: 강릉의 자연환경이 관광과 생활 모습에 어떤 영향을 주는지 설명해 봅시다."
+      },
+      jeju: {
+        title: "제주",
+        desc: "화산 지형, 해양성 기후, 관광 산업을 함께 연결해 볼 수 있는 지역입니다.",
+        question: "탐구 질문: 제주의 자연환경이 산업과 지역 이미지 형성에 어떤 역할을 하는지 정리해 봅시다."
+      }
+    };
+
+    const title = document.querySelector("#place-title");
+    const desc = document.querySelector("#place-desc");
+    const question = document.querySelector("#place-question");
+
+    document.querySelectorAll(".marker").forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = places[button.dataset.place];
+        title.textContent = item.title;
+        desc.textContent = item.desc;
+        question.textContent = item.question;
+      });
+    });
+  </script>
+</body>
+</html>

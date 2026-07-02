@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>도구 고르기 | 선생님들을 위한 웹페이지 제작 도우미</title>
+  <link rel="stylesheet" href="../assets/styles.css?v=20260702-8" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="주요 메뉴">
+      <a class="brand" href="../index.html"><span class="brand-mark">W</span><span>웹페이지 제작 도우미</span></a>
+      <div class="nav-links">
+        <a href="start.html">처음 시작</a>
+        <a href="ideas.html">수업 활용 아이디어</a>
+        <a href="choose.html" aria-current="page">도구 고르기</a>
+        <a href="workflow.html">제작 흐름</a>
+        <a href="ai.html">AI 활용</a>
+        <a href="tools.html">프로그램별 상세 가이드</a>
+        <a href="cases.html">사례 보기</a>
+        <a href="practice.html">실습 워크북</a>
+        <a href="check.html">공개 전 점검</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <span class="eyebrow">내 상황에 맞는 길 찾기</span>
+      <h1>어떤 방법으로 시작하면 좋을까요?</h1>
+      <p class="lead">
+        <span class="line-break">이 페이지는 도구를 하나로 정해주는 곳이 아닙니다.</span>
+        <span class="line-break">수업 목적에 맞게 제작 방식을 고르도록 돕는 지도입니다.</span>
+        <span class="line-break">먼저 만들고 싶은 결과를 고른 뒤, 필요한 경우 프로그램별 상세 가이드로 이동하세요.</span>
+        <span class="line-break">어떤 프로그램이 “정답”인 것은 아닙니다.</span>
+        <span class="line-break">선생님의 아이디어를 가장 덜 복잡하게 실현하는 길을 찾는 것이 목표입니다.</span>
+      </p>
+    </section>
+
+    <nav class="page-toc" aria-label="도구 고르기 목차">
+      <div class="toc-card">
+        <strong>이 페이지 목차</strong>
+        <div class="toc-links">
+          <a href="#starter-paths">1. 초보자 추천 경로 고르기</a>
+          <a href="#privacy-first">2. 응답·개인정보 먼저 점검하기</a>
+          <a href="#method">3. 내 제작 방식 고르기</a>
+          <a href="#function-map">4. 기능별 추천 도구 빠르게 보기</a>
+          <a href="#file-basics">5. 파일을 직접 다룰지 판단하기</a>
+          <a href="#compare">6. 배포 도구 차이 비교하기</a>
+          <a href="#ai-tools">7. 프론트엔드 작업용 AI 선택하기</a>
+          <a href="#os-setup">8. Windows·Mac 작업 환경 준비하기</a>
+        </div>
+      </div>
+    </nav>
+
+    <section id="starter-paths">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>초보자 추천 경로 고르기</h2>
+            <p>
+              <span class="line-break">처음부터 모든 프로그램을 비교하면 어렵습니다.</span>
+              <span class="line-break">먼저 아래 세 가지 길 중 하나를 고른 뒤, 필요한 도구만 확인하세요.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="template-grid">
+          <article class="card">
+            <span class="badge">경로 1</span>
+            <h3>기존 앱 유지형</h3>
+            <p>
+              <span class="line-break">이미 쓰고 있는 수업 플랫폼으로 충분하면 새 웹페이지를 만들지 않습니다.</span>
+              <span class="line-break">이 길은 “덜 만드는 것”이 아니라, 수업 운영을 가장 단순하게 유지하는 선택입니다.</span>
+            </p>
+            <ul>
+              <li>공지·과제·성적 흐름: Classroom, 학교 LMS, Teams</li>
+              <li>설문·신청·피드백: Google Forms, Microsoft Forms, Tally</li>
+              <li>퀴즈 리포트: Kahoot, Quizizz, Wordwall</li>
+              <li>협업 게시판: Padlet, Google Docs, FigJam</li>
+              <li>문서형 자료 허브: Notion, Drive 폴더</li>
+            </ul>
+            <div class="mini-note">
+              <strong>이 경로가 맞는 경우</strong>
+              <span class="line-break">학생이 이미 익숙한 앱에서 과제 제출과 피드백까지 잘 이어진다면</span>
+              <span class="line-break">이 경로가 가장 효율적입니다.</span>
+            </div>
+          </article>
+
+          <article class="card blue">
+            <span class="badge">경로 2</span>
+            <h3>노코드 안내형</h3>
+            <p>
+              <span class="line-break">코드 파일을 만들지 않고, 서비스 화면 안에서 안내 페이지나 활동을 만듭니다.</span>
+              <span class="line-break">수업 안내, 자료 모음, 간단한 조작 활동, 제출 링크 연결에 적합합니다.</span>
+            </p>
+            <ul>
+              <li>보기 좋은 안내: Canva AI, Canva 웹페이지</li>
+              <li>Google 자료 허브: Google Sites</li>
+              <li>긴 안내·자료 모음: Notion</li>
+              <li>눌러보는 활동: Genially</li>
+              <li>문서형 설문과 신청: Tally</li>
+            </ul>
+            <div class="mini-note">
+              <strong>이 경로가 맞는 경우</strong>
+              <span class="line-break">학생이 한 주소에서 안내를 읽고, 버튼을 누르고, 제출 링크로 이동하면 충분할 때 좋습니다.</span>
+            </div>
+          </article>
+
+          <article class="card gold">
+            <span class="badge">경로 3</span>
+            <h3>HTML 실험형</h3>
+            <p>
+              <span class="line-break">AI가 만든 `index.html` 파일을 웹에 올려 직접 만든 화면을 공유합니다.</span>
+              <span class="line-break">기존 앱으로 만들기 어려운 맞춤형 화면이나 작은 상호작용을 실험할 때 선택합니다.</span>
+            </p>
+            <ul>
+              <li>첫 파일 만들기: ChatGPT, Codex, Claude 계열 AI</li>
+              <li>첫 배포: Netlify</li>
+              <li>장기 관리: GitHub Pages</li>
+              <li>자동 배포와 운영: Cloudflare Pages</li>
+            </ul>
+            <div class="mini-note">
+              <strong>이 경로가 맞는 경우</strong>
+              <span class="line-break">“이런 화면이 있었으면 좋겠다”가 뚜렷하고, 기존 앱으로는 그 화면을 만들기 어려울 때 적합합니다.</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="callout">
+          <strong>처음이라면 추천 순서</strong>
+          <span class="line-break">기존 앱으로 가능한지 먼저 봅니다.</span>
+          <span class="line-break">부족하면 노코드 안내형으로 작게 만듭니다.</span>
+          <span class="line-break">그래도 필요한 화면이 안 나오면 HTML 실험형으로 넘어가세요.</span>
+          <span class="line-break">이 순서를 지키면 웹페이지 제작이 수업보다 앞서는 상황을 줄일 수 있습니다.</span>
+        </div>
+
+        <div class="section-head compact">
+          <div>
+            <h3>수업 장면으로 보면 더 쉽습니다</h3>
+            <p>
+              <span class="line-break">아래 예시는 “이럴 때는 어떤 길이 자연스러운가?”를 보여주는 작은 판단 연습입니다.</span>
+              <span class="line-break">내 수업이 어느 예시에 가까운지 먼저 고르면 도구 선택이 훨씬 쉬워집니다.</span>
+            </p>
+          </div>
+        </div>
+
+        <table class="info-table">
+          <tr><th>수행평가 과제 제출</th><td><span class="line-break"><strong>추천 경로:</strong> 기존 앱 유지형</span><span class="line-break">학생 명단, 제출 여부, 피드백, 성적 흐름이 중요하다면</span><span class="line-break">Classroom이나 학교 LMS를 유지하는 편이 좋습니다.</span><span class="line-break">웹페이지는 평가 기준과 예시 자료를 보여주는 보조 안내판 정도로 충분합니다.</span><span class="line-break"><strong>추천 수준 연결:</strong> 직접 제작보다 기존 앱을 먼저 봅니다.</span><span class="line-break">안내판이 필요할 때만 `처음 시작 추천` 도구를 확인하세요.</span></td></tr>
+          <tr><th>답사·행사 안내</th><td><span class="line-break"><strong>추천 경로:</strong> 노코드 안내형</span><span class="line-break">일정, 장소, 준비물, 지도 링크, 신청 링크를 한 화면에 모으는 목적이라면</span><span class="line-break">Google Sites나 Canva AI가 적합합니다.</span><span class="line-break">학생 응답은 Forms나 Tally로 연결하는 편이 안전합니다.</span><span class="line-break">안내 화면 자체에는 개인정보를 직접 적지 않는 것이 좋습니다.</span><span class="line-break"><strong>추천 수준 연결:</strong> Canva AI, Google Sites, Tally부터 확인합니다.</span></td></tr>
+          <tr><th>기후 그래프 판별 활동</th><td><span class="line-break"><strong>추천 경로:</strong> HTML 실험형</span><span class="line-break">학생이 그래프를 고르고 버튼을 누른 뒤, 결과 설명을 바로 확인해야 한다면</span><span class="line-break">AI가 만든 HTML/JavaScript 활동이 의미가 있습니다.</span><span class="line-break">첫 배포는 Netlify로 작게 성공해봅니다.</span><span class="line-break">계속 수정할 자료라면 GitHub Pages나 Cloudflare Pages로 확장합니다.</span><span class="line-break"><strong>추천 수준 연결:</strong> Netlify로 먼저 성공한 뒤 장기 운영 도구를 봅니다.</span></td></tr>
+        </table>
+
+        <details class="mobile-collapse" data-mobile-collapse open>
+          <summary>
+            <span>추가 수업 예시 더 보기</span>
+            <span class="collapse-subtext">전시, 방탈출, 대시보드, 모둠 체크 앱을 비교합니다.</span>
+          </summary>
+          <div class="mobile-collapse-body">
+            <table class="info-table">
+              <tr><th>자료 전시회</th><td><span class="line-break"><strong>추천 경로:</strong> 노코드 안내형</span><span class="line-break">학생 작품, 발표 자료, 탐구 결과를 모아 보여주는 목적이라면</span><span class="line-break">Google Sites, Canva 웹페이지, Notion이 적합합니다.</span><span class="line-break">댓글, 점수, 제출 확인이 필요하면 Forms나 Tally를 별도로 연결합니다.</span><span class="line-break"><strong>추천 수준 연결:</strong> `처음 시작 추천` 도구만으로 충분한 경우가 많습니다.</span></td></tr>
+              <tr><th>방탈출형 수업</th><td><span class="line-break"><strong>추천 경로:</strong> 노코드 안내형 또는 HTML 실험형</span><span class="line-break">이미지 위 팝업, 단계별 단서, 숨겨진 설명은 Genially로 시작하기 좋습니다.</span><span class="line-break">정답 판정, 점수 계산, 조건에 따른 다음 화면 이동이 필요하면</span><span class="line-break">AI가 만든 HTML/JavaScript를 검토합니다.</span><span class="line-break"><strong>추천 수준 연결:</strong> Genially는 `상황 맞으면 추천`입니다.</span><span class="line-break">직접 만든 HTML 활동은 배포 도구와 함께 봅니다.</span></td></tr>
+              <tr><th>학습자 분석 대시보드</th><td><span class="line-break"><strong>추천 경로:</strong> 기존 앱 유지형에서 시작 후 필요 시 확장</span><span class="line-break">설문 결과를 보기만 하면 Forms와 Sheets로 충분할 수 있습니다.</span><span class="line-break">모둠 구성, 관심 주제, 활동 결과를 계속 관리하려면</span><span class="line-break">AppSheet, Canva Sheets, Supabase를 비교합니다.</span><span class="line-break"><strong>추천 수준 연결:</strong> AppSheet는 `상황 맞으면 추천`입니다.</span><span class="line-break">Supabase와 Firebase는 `고급 단계`로 봅니다.</span></td></tr>
+              <tr><th>모둠 활동 체크 앱</th><td><span class="line-break"><strong>추천 경로:</strong> 노코드 안내형 또는 응답 관리형</span><span class="line-break">체크리스트와 제출 현황만 필요하면 Google Sheets나 AppSheet가 현실적입니다.</span><span class="line-break">학생이 직접 입력하고 교사가 상태를 계속 확인해야 한다면</span><span class="line-break">AppSheet를 먼저 검토합니다.</span><span class="line-break"><strong>추천 수준 연결:</strong> 단순 제출은 Forms나 Tally가 더 쉽습니다.</span></td></tr>
+            </table>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="privacy-first">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>응답·개인정보 먼저 점검하기</h2>
+            <p>
+              <span class="line-break">도구를 고르기 전에 학생에게 무엇을 입력하게 할지 먼저 정해야 합니다.</span>
+              <span class="line-break">입력을 받지 않는 안내 페이지와, 학생 응답을 저장하는 웹앱은 위험도와 준비물이 다릅니다.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="detail-grid">
+          <div class="detail-box">
+            <strong>받지 않아도 되는 정보는 빼기</strong>
+            <p>
+              <span class="line-break">이름, 학번, 얼굴 사진, 성적, 연락처는 꼭 필요한 경우가 아니면 받지 않습니다.</span>
+              <span class="line-break">별칭, 모둠, 번호처럼 줄일 수 있는지 먼저 봅니다.</span>
+            </p>
+          </div>
+          <div class="detail-box">
+            <strong>저장 위치 확인하기</strong>
+            <p>
+              <span class="line-break">Google Forms, Tally, AppSheet, Supabase, Firebase 중</span>
+              <span class="line-break">어디에 응답이 저장되는지 확인합니다.</span>
+              <span class="line-break">저장 위치를 모르면 공개 전에 멈추는 것이 안전합니다.</span>
+            </p>
+          </div>
+          <div class="detail-box">
+            <strong>공개 범위 나누기</strong>
+            <p>
+              <span class="line-break">학생이 보는 화면, 교사만 보는 응답, 학급 전체에 공유할 요약 결과를 나눕니다.</span>
+              <span class="line-break">원자료를 그대로 공개하지 않는 것이 기본입니다.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <strong>먼저 묻는 질문</strong>
+          <span class="line-break">학생 응답이 필요 없으면 안내·배포 도구부터 보면 됩니다.</span>
+          <span class="line-break">예: Canva AI, Google Sites, Notion, Netlify</span>
+          <span class="line-break">응답이 필요하면 Forms나 Tally처럼 안정적인 제출함부터 검토하세요.</span>
+          <span class="line-break">권한 관리가 필요한 경우에만 AppSheet, Supabase, Firebase로 확장합니다.</span>
+          <div class="actions">
+            <a class="btn" href="check.html#safety-check">개인정보 점검표 보기</a>
+            <a class="btn" href="check.html#service-check">서비스 권한 점검</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="method">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>내 제작 방식 고르기</h2>
+            <p>
+              <span class="line-break">처음 만드는 교사라면 프로그램 이름부터 고르지 않아도 됩니다.</span>
+              <span class="line-break">먼저 “학생에게 안내판이 필요한가, 눌러보는 활동이 필요한가, 응답을 모아야 하는가”를 떠올립니다.</span>
+              <span class="line-break">그다음에 알맞은 도구를 고르는 편이 훨씬 덜 막막합니다.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <strong>이 페이지에서 고르는 순서</strong>
+          <span class="line-break">수업자료 제작은 한 줄 사다리가 아니라 여러 갈래 길입니다.</span>
+          <span class="line-break">먼저 필요한 기능을 고른 뒤, 그 기능을 가장 쉽게 해주는 도구를 고릅니다.</span>
+          <span class="line-break">안내만 필요하면 Canva AI나 Google Sites부터 봅니다.</span>
+          <span class="line-break">학생이 눌러보는 활동은 Canva AI나 Genially가 출발점입니다.</span>
+          <span class="line-break">응답 수집은 Forms나 Tally부터 시작합니다.</span>
+          <span class="line-break">AI가 만든 `index.html` 파일을 직접 배포해야 할 때만</span>
+          <span class="line-break">파일 구조, Netlify, GitHub Pages, Cloudflare Pages를 차례대로 확인하세요.</span>
+        </div>
+
+        <div class="template-grid">
+          <article class="card">
+            <span class="badge">가장 쉬움</span>
+            <h3>가장 쉬운 시작: 안내 페이지 만들기</h3>
+            <p>
+              <span class="line-break">수업 안내, 수행평가 안내, 자료 링크 모음처럼</span>
+              <span class="line-break">학생이 읽고 따라갈 화면을 만듭니다.</span>
+            </p>
+            <ul>
+              <li>추천 도구: Google Sites, Canva AI/Canva 웹페이지, Notion</li>
+              <li>추천 상황: 학부모 안내, 행사 안내, 자료실, 작품 전시, 짧은 활동 안내</li>
+              <li>먼저 확인: 이 단계가 정말 내 수업에 맞는지 제작 흐름에서 확인</li>
+            </ul>
+            <div class="actions"><a class="btn" href="workflow.html#path-ai-direct">이 방식 먼저 이해하기</a></div>
+          </article>
+
+          <article class="card blue">
+            <span class="badge">활동 만들기</span>
+            <h3>활동형 시작: 눌러보는 활동 만들기</h3>
+            <p>
+              <span class="line-break">학생이 버튼을 누르고 정답을 확인합니다.</span>
+              <span class="line-break">또는 지도·이미지를 탐색하는 활동을 만듭니다.</span>
+            </p>
+            <ul>
+              <li>추천 도구: Canva AI, Genially, AI가 만든 HTML/JavaScript</li>
+              <li>추천 상황: OX 퀴즈, 플래시카드, 매칭 게임, 팝업 설명, 지도 탐색</li>
+              <li>먼저 확인: 활동이 꼭 웹페이지 안에 있어야 하는지 제작 흐름에서 확인</li>
+            </ul>
+            <div class="actions"><a class="btn" href="workflow.html#path-interactive">이 방식 먼저 이해하기</a></div>
+          </article>
+
+          <article class="card gold">
+            <span class="badge">응답 수집</span>
+            <h3>응답형 시작: 학생 응답과 신청 받기</h3>
+            <p>
+              <span class="line-break">학생 의견, 신청, 피드백, 활동 완료 여부를 받을 때는</span>
+              <span class="line-break">저장 방식의 난이도를 먼저 나눕니다.</span>
+            </p>
+            <ul>
+              <li>가장 쉬운 입력 수집: Google Forms, Tally</li>
+              <li>시트 기반 관리 앱: Google AppSheet</li>
+              <li>주의: 학생 개인정보를 꼭 받아야 하는지 먼저 판단</li>
+            </ul>
+            <div class="actions"><a class="btn" href="workflow.html#path-response">이 방식 먼저 이해하기</a></div>
+          </article>
+
+          <article class="card rose">
+            <span class="badge">파일 만들기</span>
+            <h3>파일형 시작: AI로 `index.html` 만들기</h3>
+            <p>
+              <span class="line-break">기존 도구로 만들기 어려운 화면이 필요할 수 있습니다.</span>
+              <span class="line-break">그럴 때 AI에게 “첫 안내판 파일”을 만들어 달라고 요청합니다.</span>
+            </p>
+            <ul>
+              <li>쉽게 말하면: 내 컴퓨터 안에 놓인 첫 웹페이지 종이를 만드는 단계</li>
+              <li>추천 상황: 기존 도구로 어려운 화면 구성이나 작은 활동 화면이 필요할 때</li>
+              <li>먼저 확인: 파일을 만든 뒤 어디에 올릴지도 함께 생각하기</li>
+            </ul>
+            <div class="actions"><a class="btn" href="workflow.html#path-static-html">이 방식 먼저 이해하기</a></div>
+          </article>
+
+          <article class="card">
+            <span class="badge">배포</span>
+            <h3>공유형 시작: 웹에 올려 주소 만들기</h3>
+            <p>
+              <span class="line-break">내 컴퓨터 안에만 있던 웹페이지 파일을</span>
+              <span class="line-break">학생들이 주소로 열 수 있게 인터넷 위에 올리는 단계입니다.</span>
+            </p>
+            <ul>
+              <li>첫 배포 추천: Netlify</li>
+              <li>장기 관리: GitHub Pages</li>
+              <li>자동 배포와 운영: Cloudflare Pages</li>
+            </ul>
+            <div class="actions"><a class="btn" href="workflow.html#path-deploy">이 방식 먼저 이해하기</a></div>
+          </article>
+
+          <article class="card blue">
+            <span class="badge">확장</span>
+            <h3>확장형 시작: 웹앱처럼 확장하기</h3>
+            <p>
+              <span class="line-break">여러 화면, 진행률, 필터, 대시보드처럼</span>
+              <span class="line-break">단순 안내 페이지를 넘어서는 기능이 필요할 때 검토합니다.</span>
+            </p>
+            <ol>
+              <li>React/Next.js 프로젝트라면 Vercel을 검토합니다.</li>
+              <li>GitHub 자동 배포와 운영 관리는 Cloudflare Pages를 검토합니다.</li>
+              <li>데이터 저장이 필요해도 먼저 화면과 배포가 제대로 되는지 확인합니다.</li>
+            </ol>
+            <div class="actions"><a class="btn" href="workflow.html#path-webapp">이 방식 먼저 이해하기</a></div>
+          </article>
+
+          <article class="card gold">
+            <span class="badge">데이터 저장</span>
+            <h3>저장형 시작: 학생 응답과 기록 저장하기</h3>
+            <p>
+              <span class="line-break">직접 만든 웹앱에서 응답을 저장해야 할 수 있습니다.</span>
+              <span class="line-break">저장한 응답을 다시 불러와야 할 때 검토하는 단계입니다.</span>
+            </p>
+            <ol>
+              <li>표 기반 응답 저장은 Supabase를 검토합니다.</li>
+              <li>로그인, 실시간 동기화, 파일 저장은 Firebase를 검토합니다.</li>
+              <li>단순 응답은 Forms나 Tally로 충분한지 먼저 비교합니다.</li>
+              <li>학생 개인정보, 공개 범위, 보안 규칙을 반드시 확인합니다.</li>
+            </ol>
+            <div class="actions"><a class="btn" href="workflow.html#path-database">이 방식 먼저 이해하기</a></div>
+          </article>
+        </div>
+
+        <div class="callout">
+          <strong>같은 프로그램도 수업 아이디어에 따라 달라집니다</strong>
+          <span class="line-break">Canva는 카드뉴스만 만드는 도구가 아니라 간단한 퀴즈와 웹페이지로 확장될 수 있습니다.</span>
+          <span class="line-break">Google Sites는 자료실에서 출발해 Apps Script와 연결된 제출 확인 허브가 될 수 있습니다.</span>
+          <span class="line-break">Netlify나 Cloudflare는 단순 배포 도구로 시작하지만, 직접 만든 상호작용 활동을 학생에게 공유하는 통로가 됩니다.</span>
+          <span class="line-break">처음부터 큰 기능을 고르기보다 “내 수업에서 학생이 어떤 행동을 하게 만들고 싶은가?”를 먼저 정해보세요.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="function-map">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>기능별 추천 도구 빠르게 보기</h2>
+            <p>
+              <span class="line-break">초보자는 프로그램 이름보다 “내가 수업에서 하려는 일”을 먼저 고르는 편이 쉽습니다.</span>
+              <span class="line-break">아래 표는 같은 기능을 만들 때 어떤 도구가 더 덜 복잡한지 판단하기 위한 빠른 지도입니다.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <strong>먼저 멈추고 5문항만 확인하세요</strong>
+          <span class="line-break">학생 명단·과제·성적 관리가 핵심이면 Classroom이나 학교 LMS를 먼저 씁니다.</span>
+          <span class="line-break">응답을 받기만 하면 Forms나 Tally가 먼저입니다.</span>
+          <span class="line-break">퀴즈 결과와 리포트가 중요하면 Kahoot, Quizizz, Wordwall 같은 퀴즈 앱이 먼저입니다.</span>
+          <span class="line-break">자료와 링크만 모으면 된다면 Google Sites, Notion, Drive, Classroom으로 충분할 수 있습니다.</span>
+          <span class="line-break">기존 앱으로 수업 흐름이 끊기거나 교과 맞춤 화면이 꼭 필요할 때 직접 제작을 검토하세요.</span>
+        </div>
+
+        <table class="info-table">
+          <tr><th>1. 수업 목표 확인</th><td><span class="line-break">학생이 무엇을 보고, 누르고, 제출하고, 확인해야 하는지 한 문장으로 적습니다.</span><span class="line-break">예: “학생이 수행평가 기준을 읽고 Forms로 주제를 제출한다.”</span></td></tr>
+          <tr><th>2. 기존 앱으로 가능한가</th><td><span class="line-break">Classroom, LMS, Forms, Padlet, Kahoot, Google Sites로 해결되는지 먼저 봅니다.</span><span class="line-break">이미 운영 중인 앱으로 충분하면 그 방법을 유지하는 것이 더 효율적입니다.</span></td></tr>
+          <tr><th>3. 기존 앱 사용</th><td><span class="line-break">가능하다면 새 웹페이지를 만들지 말고 기존 앱의 링크, 권한, 안내 문구만 정리합니다.</span><span class="line-break">이 경우 웹페이지는 선택 사항입니다.</span></td></tr>
+          <tr><th>4. 직접 제작 검토</th><td><span class="line-break">기존 앱으로 수업 흐름이 끊기거나, 교과 맞춤 화면·지도 탐색·특수한 상호작용이 필요할 때 직접 제작을 검토합니다.</span></td></tr>
+          <tr><th>5. 공개 전 점검</th><td><span class="line-break">직접 제작을 선택했다면 학생 개인정보, 자료 권한, 모바일 화면, 링크 작동을 공개 전 점검에서 다시 확인합니다.</span></td></tr>
+        </table>
+
+        <table class="info-table">
+          <tr><th>수업 안내만 필요해요</th><td><span class="line-break"><strong>Google Sites</strong>는 Google 자료를 모으기 쉽습니다.</span><span class="line-break"><strong>Canva AI/Canva 웹페이지</strong>는 보기 좋은 한 페이지를 빠르게 만들기 좋습니다.</span><span class="line-break"><strong>Notion</strong>은 긴 문서형 안내와 자료 허브를 정리할 때 추천 앱으로 볼 수 있습니다.</span><span class="line-break">다만 학생 관리와 과제 제출은 Classroom이나 학교 LMS가 더 적합할 수 있습니다.</span></td></tr>
+          <tr><th>예쁜 안내·홍보 페이지가 필요해요</th><td><span class="line-break"><strong>Canva AI</strong>를 먼저 검토하세요.</span><span class="line-break">학교 행사, 특강 안내, 수행평가 소개처럼 첫인상이 중요한 안내에 적합합니다.</span></td></tr>
+          <tr><th>학생이 눌러보는 활동이 필요해요</th><td><span class="line-break">이미지·지도 위를 누르는 활동은 <strong>Genially</strong>가 좋습니다.</span><span class="line-break">짧은 퀴즈나 카드 활동은 <strong>Canva AI</strong>가 편합니다.</span><span class="line-break">더 자유로운 퀴즈·필터·지도 탐색은 <strong>AI가 만든 HTML/JavaScript</strong>가 좋습니다.</span></td></tr>
+          <tr><th>응답·신청·피드백을 받고 싶어요</th><td><span class="line-break">가장 쉬운 시작은 <strong>Google Forms</strong> 또는 <strong>Tally</strong>입니다.</span><span class="line-break">질문이 문서처럼 자연스럽고 조건부 흐름이 필요하면 Tally가 좋습니다.</span><span class="line-break">학교 Google 계정 흐름이 중요하면 Forms가 편합니다.</span></td></tr>
+          <tr><th>표와 차트로 결과를 보여주고 싶어요</th><td><span class="line-break"><strong>Canva Sheets</strong>는 Canva 안에서 표 데이터를 저장하고 차트·인포그래픽으로 바꾸기 좋습니다.</span><span class="line-break">모둠별 진행 현황, 사전 조사 요약, 발표 순서처럼 교사가 직접 관리하는 데이터에 적합합니다.</span><span class="line-break">학생이 직접 제출하는 개인정보 포함 응답은 Forms, Tally, AppSheet와 비교하세요.</span></td></tr>
+          <tr><th>제출 현황을 계속 관리하고 싶어요</th><td><span class="line-break"><strong>AppSheet</strong>를 검토하세요.</span><span class="line-break">Google Sheets를 바탕으로 제출 여부, 모둠 활동 체크, 답사 준비물 확인 같은 관리 앱을 만들 수 있습니다.</span></td></tr>
+          <tr><th>AI가 만든 HTML 파일을 공유하고 싶어요</th><td><span class="line-break">첫 배포는 <strong>Netlify</strong>가 가장 쉽습니다.</span><span class="line-break">먼저 폴더를 올려 주소를 만드는 경험부터 해봅니다.</span><span class="line-break">장기 운영은 GitHub Pages나 Cloudflare Pages로 넘어가도 됩니다.</span></td></tr>
+          <tr><th>매년 수정하며 오래 쓰고 싶어요</th><td><span class="line-break"><strong>GitHub Pages</strong>는 저장소에 파일을 보관하며 수정 기록을 남기기 좋습니다.</span><span class="line-break"><strong>Cloudflare Pages</strong>는 GitHub와 연결해 자동 배포하기 좋습니다.</span></td></tr>
+          <tr><th>로그인·기록·실시간 데이터가 필요해요</th><td><span class="line-break">표처럼 저장하고 조회하는 구조는 <strong>Supabase</strong>를 검토합니다.</span><span class="line-break">로그인·실시간 동기화·파일 저장은 <strong>Firebase</strong>를 검토합니다.</span><span class="line-break">이 단계는 개인정보와 보안 규칙 점검이 필수입니다.</span><span class="line-break">낯선 말이 나오면 <a href="check.html#advanced-terms">고급 용어 미니 사전</a>을 먼저 확인하세요.</span></td></tr>
+        </table>
+
+        <div class="mini-note">
+          <strong>주의: 직접 제작을 대체할 수 있는 앱이 있으면 먼저 쓰세요</strong>
+          <span class="line-break">이 표는 “무엇을 새로 만들까?”가 아니라 “이미 있는 도구로 충분한가?”를 먼저 확인하기 위한 표입니다.</span>
+          <span class="line-break">이미 익숙한 앱으로 안정적으로 운영되는 기능은 새 웹페이지로 다시 만들 필요가 없습니다.</span>
+        </div>
+
+        <table class="info-table">
+          <tr><th>공지·과제·성적 관리</th><td><span class="line-break"><strong>Google Classroom, 학교 LMS, Microsoft Teams</strong>가 더 적합할 수 있습니다.</span><span class="line-break">학생 명단, 과제 제출, 피드백, 성적 흐름이 이미 잡혀 있다면 웹페이지는 보조 안내판으로만 쓰는 편이 좋습니다.</span></td></tr>
+          <tr><th>설문·신청·피드백</th><td><span class="line-break"><strong>Google Forms, Microsoft Forms, Tally</strong>로 대체할 수 있습니다.</span><span class="line-break">응답 저장과 결과 확인이 목적이라면 직접 저장 기능을 만들기보다 폼 도구가 더 안전합니다.</span></td></tr>
+          <tr><th>퀴즈·게임형 확인</th><td><span class="line-break"><strong>Kahoot, Quizizz, Wordwall, LearningApps</strong>가 더 빠를 수 있습니다.</span><span class="line-break">직접 제작은 기존 퀴즈 앱으로 만들기 어려운 지도 탐색, 맞춤형 분기, 교과 특화 화면이 필요할 때 검토합니다.</span></td></tr>
+          <tr><th>의견 모으기·협업</th><td><span class="line-break"><strong>Padlet, Google Docs, FigJam</strong>으로 대체할 수 있습니다.</span><span class="line-break">학생이 글, 이미지, 링크를 함께 올리는 활동은 협업 앱이 더 관리하기 쉽습니다.</span></td></tr>
+          <tr><th>영상 기반 활동</th><td><span class="line-break"><strong>YouTube, Edpuzzle, Canva 동영상</strong>이 더 적합할 수 있습니다.</span><span class="line-break">영상 시청과 간단 확인이 핵심이면 웹페이지를 새로 만들기보다 영상 플랫폼과 폼을 연결하는 편이 쉽습니다.</span></td></tr>
+        </table>
+
+        <table class="info-table">
+          <tr><th>Classroom·LMS</th><td><span class="line-break">공지, 과제 제출, 피드백, 성적 흐름처럼 학생 관리가 핵심일 때 먼저 봅니다.</span><span class="line-break">직접 제작한 웹페이지는 이 흐름을 대신하기보다 필요한 안내를 보조하는 역할이 좋습니다.</span></td></tr>
+          <tr><th>Forms·Tally</th><td><span class="line-break">설문, 신청, 피드백처럼 학생이 한 번 제출하고 교사가 확인하는 활동에 적합합니다.</span><span class="line-break">개인정보를 최소화하고 응답 공개 범위를 확인하기 쉽습니다.</span></td></tr>
+          <tr><th>Padlet·Docs</th><td><span class="line-break">의견 모으기, 공동 작성, 자료 공유처럼 학생 참여 게시판이 필요한 경우에 적합합니다.</span><span class="line-break">웹페이지를 새로 만들기보다 링크로 연결하는 것만으로 충분할 때가 많습니다.</span></td></tr>
+          <tr><th>Kahoot·Quizizz·Wordwall</th><td><span class="line-break">정형 퀴즈, 복습 게임, 점수 리포트가 필요할 때 먼저 검토합니다.</span><span class="line-break">직접 제작은 지도 탐색, 맞춤형 분기, 교과 특화 화면이 필요할 때 검토합니다.</span></td></tr>
+          <tr><th>Sheets·AppSheet</th><td><span class="line-break">표로 제출 현황을 보고 관리해야 할 때 적합합니다.</span><span class="line-break">단순 표 확인은 Sheets, 입력·조회 앱이 필요하면 AppSheet로 확장합니다.</span></td></tr>
+        </table>
+
+        <div class="callout">
+          <strong>중요한 판단 기준</strong>
+          <span class="line-break">같은 기능을 여러 프로그램으로 만들 수 있어도, 가장 좋은 선택은 “수업 목표를 가장 덜 복잡하게 달성하는 도구”입니다.</span>
+          <span class="line-break">예쁘게 만들 수 있다고 해서 모두 웹페이지로 만들 필요는 없습니다.</span>
+          <span class="line-break">단순 제출은 Forms나 Tally가 더 효과적일 수 있습니다.</span>
+          <span class="line-break">반대로 기존 플랫폼에서 학생 경험을 충분히 만들기 어렵다면 직접 만든 웹페이지나 웹앱이 의미 있는 선택이 됩니다.</span>
+          <div class="actions">
+            <a class="btn" href="tools.html">프로그램별 상세 가이드</a>
+            <a class="btn" href="practice.html#practice-workbook">실습 워크북</a>
+            <a class="btn" href="check.html#troubleshooting">막힘 사전</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="file-basics">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>파일을 직접 다룰지 판단하기</h2>
+            <p>
+              <span class="line-break">이 페이지에서는 파일 구조를 자세히 배우기보다, 내 작업에 파일 이해가 필요한지 먼저 판단합니다.</span>
+              <span class="line-break">Canva, Google Sites처럼 자체 게시가 되는 도구는 파일을 직접 만지지 않아도 시작할 수 있습니다.</span>
+              <span class="line-break">AI가 만든 HTML을 배포하려면 파일과 폴더를 함께 다루는 방식으로 넘어가야 합니다.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="detail-grid">
+          <div class="detail-box">
+            <strong>파일을 몰라도 되는 경우</strong>
+            <p>
+              <span class="line-break">Canva 웹페이지나 Google Sites처럼 화면 안에서 만들고 바로 게시하는 도구는</span>
+              <span class="line-break">처음부터 `index.html`을 몰라도 됩니다.</span>
+              <span class="line-break">교사는 내용, 링크, 공개 범위에 더 집중하면 됩니다.</span>
+            </p>
+          </div>
+          <div class="detail-box">
+            <strong>파일을 조금 알아야 하는 경우</strong>
+            <p>
+              <span class="line-break">AI가 만들어준 HTML 파일을 Netlify, GitHub Pages, Cloudflare Pages에 올릴 때는</span>
+              <span class="line-break">`index.html`이 첫 화면이라는 점을 알아야 합니다.</span>
+              <span class="line-break">이미지나 PDF는 함께 올려야 하는 자료함이라고 이해하면 됩니다.</span>
+            </p>
+          </div>
+          <div class="detail-box">
+            <strong>파일 구조를 제대로 봐야 하는 경우</strong>
+            <p>
+              <span class="line-break">퀴즈, 지도, 결과 화면처럼 JavaScript가 들어가거나 이미지와 자료가 많아지면</span>
+              <span class="line-break">파일 구조 이해가 필요합니다.</span>
+              <span class="line-break">이때는 제작 흐름의 HTML 파일 기반 제작 설명으로 넘어가면 됩니다.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <strong>자세한 설명은 제작 흐름에서 확인하세요</strong>
+          <span class="line-break">이곳에서는 “파일을 다루는 방식이 필요한가?”만 판단하면 됩니다.</span>
+          <span class="line-break">`index.html`, CSS, JavaScript, assets 폴더의 의미와 AI에게 첫 파일을 요청하는 방법은</span>
+          <span class="line-break"><a href="workflow.html#html-file-basics">제작 흐름의 HTML 파일 기반 제작 이해하기</a>에서 이어서 확인하세요.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>배포 도구 차이 비교하기</h2>
+            <p>
+              <span class="line-break">AI로 index.html을 만들었다면 보통 세 가지 배포 방식을 고민합니다.</span>
+              <span class="line-break">모두 정적 웹페이지를 공개할 수 있지만, 첫 배포 난이도와 장기 관리 방식이 다릅니다.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="template-grid">
+          <article class="card blue">
+            <span class="badge">첫 배포 추천</span>
+            <h3>Netlify</h3>
+            <p>
+              <span class="line-break">가장 빠르게 웹주소를 만들고 싶을 때 좋습니다.</span>
+              <span class="line-break">`index.html`이 들어 있는 폴더를 드래그앤드롭하면 바로 배포할 수 있습니다.</span>
+            </p>
+            <ul>
+              <li>좋은 경우: 처음 HTML을 배포해보는 교사</li>
+              <li>좋은 경우: 학생에게 빨리 주소를 공유해야 할 때</li>
+              <li>좋은 경우: GitHub가 아직 낯설 때</li>
+              <li>주의: 수정할 때 다시 배포하거나 GitHub 연결을 해야 함</li>
+            </ul>
+          </article>
+
+          <article class="card gold">
+            <span class="badge">장기 관리 추천</span>
+            <h3>GitHub Pages</h3>
+            <p>
+              <span class="line-break">수업 자료를 오래 보관하고 매년 수정해 재사용하고 싶을 때 좋습니다.</span>
+              <span class="line-break">GitHub 저장소에 파일을 올리고 Pages 기능을 켜는 방식입니다.</span>
+            </p>
+            <ul>
+              <li>좋은 경우: 수행평가 안내 페이지를 매년 수정할 때</li>
+              <li>좋은 경우: 동료 교사와 자료를 공유할 때</li>
+              <li>좋은 경우: 여러 HTML 페이지를 체계적으로 관리할 때</li>
+              <li>주의: 저장소, commit, Pages 설정이 처음에는 낯설 수 있음</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="badge">자동 배포 추천</span>
+            <h3>Cloudflare Pages</h3>
+            <p>
+              <span class="line-break">GitHub 저장소와 연결해 자동 배포를 관리하고 싶을 때 좋습니다.</span>
+              <span class="line-break">미리보기 배포, 이전 버전 확인, 커스텀 도메인 연결까지 함께 고려할 수 있습니다.</span>
+            </p>
+            <ul>
+              <li>좋은 경우: GitHub에 올린 자료를 수정할 때마다 자동으로 반영하고 싶을 때</li>
+              <li>좋은 경우: 수업 사이트를 장기 운영하며 버전 관리를 하고 싶을 때</li>
+              <li>좋은 경우: 나중에 도메인 연결이나 여러 배포 환경을 고려할 때</li>
+              <li>주의: 첫 HTML 한 장을 올리는 경험은 Netlify가 더 쉽습니다.</li>
+            </ul>
+          </article>
+        </div>
+
+        <table class="info-table">
+          <tr><th>비교 항목</th><td><span class="line-break"><strong>Netlify</strong>는 빠른 첫 배포에 강합니다.</span><span class="line-break"><strong>GitHub Pages</strong>는 저장소 기반 장기 관리에 좋습니다.</span><span class="line-break"><strong>Cloudflare Pages</strong>는 GitHub 자동 배포와 운영 관리에 강합니다.</span></td></tr>
+          <tr><th>첫 배포 난이도</th><td><span class="line-break">Netlify가 가장 쉽습니다.</span><span class="line-break">폴더를 끌어다 놓는 방식이라 초보자가 바로 결과를 볼 수 있습니다.</span></td></tr>
+          <tr><th>수정과 관리</th><td><span class="line-break">GitHub Pages와 Cloudflare Pages는 GitHub 저장소를 중심으로 관리합니다.</span><span class="line-break">수정 기록을 남기며 오래 운영하기 좋습니다.</span></td></tr>
+          <tr><th>자동 배포</th><td><span class="line-break">Cloudflare Pages는 GitHub와 연결해 수정 사항을 자동 반영하는 흐름이 강합니다.</span><span class="line-break">Netlify도 GitHub 연결이 가능하지만, 첫 경험은 수동 배포가 더 쉽습니다.</span></td></tr>
+          <tr><th>추천 흐름</th><td><span class="line-break">오늘 바로 공유는 Netlify를 먼저 검토합니다.</span><span class="line-break">매년 고쳐 쓸 수업 자료는 GitHub Pages가 좋습니다.</span><span class="line-break">GitHub 자동 배포와 장기 운영은 Cloudflare Pages를 검토하세요.</span></td></tr>
+          <tr><th>안전 점검</th><td><span class="line-break">어떤 배포 방식을 쓰든 학생 개인정보, 자료 링크 권한, 공개 범위는</span><span class="line-break"><a href="check.html">공개 전 점검</a>에서 다시 확인해야 합니다.</span></td></tr>
+        </table>
+
+        <div class="callout">
+          <strong>초보자에게 가장 현실적인 순서</strong>
+          <span class="line-break">AI 활용 페이지에서 `index.html`을 만든 뒤 Netlify로 먼저 배포해보세요.</span>
+          <span class="line-break">웹주소가 만들어지는 경험을 먼저 해봅니다.</span>
+          <span class="line-break">계속 쓸 자료는 GitHub Pages나 Cloudflare Pages로 관리하는 흐름이 좋습니다.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai-tools">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>프론트엔드 작업용 AI 선택하기</h2>
+            <p>
+              <span class="line-break">HTML 코드 작성, 오류 수정, 배포 과정 설명은 AI의 도움을 많이 받을 수 있습니다.</span>
+              <span class="line-break">특히 파일 구조를 이해하고 여러 번 수정해야 하는 작업에서는 코딩 작업에 강한 AI를 고르는 것이 결과물에 영향을 줍니다.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="template-grid">
+          <article class="card">
+            <span class="tool-icon" aria-hidden="true">1</span>
+            <span class="badge">처음 시작</span>
+            <h3>일반 대화형 AI로 구조 잡기</h3>
+            <p>
+              <span class="line-break">ChatGPT나 Claude 웹 대화창만으로도 첫 HTML 초안은 만들 수 있습니다.</span>
+              <span class="line-break">수업 목적, 대상, 활동 흐름, 넣을 링크를 설명하면 `index.html` 형태의 초안을 받을 수 있습니다.</span>
+            </p>
+            <ul>
+              <li>좋은 작업: 첫 화면 문구 만들기, 섹션 구성, 버튼 이름 정하기</li>
+              <li>주의할 점: 파일 여러 개를 다루거나 오류를 고칠 때는 대화만으로 한계가 생길 수 있음</li>
+            </ul>
+          </article>
+
+          <article class="card blue">
+            <span class="tool-icon blue" aria-hidden="true">2</span>
+            <span class="badge">유료 구독자 추천</span>
+            <h3>ChatGPT Codex 또는 Claude Code</h3>
+            <p>
+              <span class="line-break">유료 구독자라면 코딩 작업에 특화된 Codex나 Claude Code를 추천합니다.</span>
+              <span class="line-break">이유는 HTML, CSS, JavaScript 파일을 함께 보고 수정하는 작업에 더 적합하기 때문입니다.</span>
+            </p>
+            <ul>
+              <li>좋은 작업: 여러 파일 수정, 디자인 반영, 오류 원인 찾기, 배포 전 점검</li>
+              <li>추천 상황: 직접 만든 웹페이지를 계속 수정하고 관리하려는 교사</li>
+            </ul>
+          </article>
+
+          <article class="card gold">
+            <span class="tool-icon gold" aria-hidden="true">3</span>
+            <span class="badge">여러 AI 사용 가능</span>
+            <h3>최신 코딩 강점 모델 우선 검토</h3>
+            <p>
+              <span class="line-break">여러 AI를 모두 사용할 수 있는 교원이라면</span>
+              <span class="line-break">HTML과 프론트엔드 코드 작성에 강한 모델을 우선 검토할 수 있습니다.</span>
+              <span class="line-break">예: 최신 Claude Opus 계열처럼 코딩 평가가 좋은 모델</span>
+              <span class="line-break">모델 이름은 자주 바뀌므로 실제 사용 직전 공식 서비스 화면에서 최신 모델명을 확인하세요.</span>
+            </p>
+            <ul>
+              <li>좋은 작업: 복잡한 프론트엔드 구조 제안, 긴 코드 검토, 오류 수정 방향 제시</li>
+              <li>작은 참고: 단순 문구 작성보다 HTML 코드, 파일 구조, 오류 수정 능력을 기준으로 고르는 것이 좋습니다.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="callout">
+          <strong>추천의 기준</strong>
+          <span class="line-break">어떤 AI가 “가장 좋다”보다 중요한 것은 수업 목적을 정확히 설명하는 것입니다.</span>
+          <span class="line-break">수정 요청을 구체적으로 하는 것도 중요합니다.</span>
+          <span class="line-break">다만 HTML 코드 작성과 프론트엔드 오류 수정은 모델 성능과 코딩 작업 환경의 영향을 크게 받습니다.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="os-setup">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <h2>Windows·Mac 작업 환경 준비하기</h2>
+            <p>
+              <span class="line-break">웹페이지 제작은 사이트 선택만으로 끝나지 않습니다.</span>
+              <span class="line-break">내 컴퓨터에서 파일을 만들고, 확인하고, 다시 수정할 수 있는 작업 환경도 결과물의 품질에 영향을 줍니다.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="split">
+          <article class="card blue">
+            <span class="tool-icon blue" aria-hidden="true">W</span>
+            <span class="badge">Windows</span>
+            <h3>윈도우에서 준비하기</h3>
+            <ol>
+              <li>브라우저는 Chrome 또는 Edge를 준비합니다.</li>
+              <li>코드를 직접 고칠 가능성이 있다면 Visual Studio Code 또는 Cursor를 설치합니다.</li>
+              <li>AI가 만든 `index.html`은 바탕화면보다 별도 폴더에 저장합니다. 예: `class-webpage`</li>
+              <li>파일을 더블클릭해 브라우저에서 먼저 확인한 뒤 Netlify나 GitHub Pages에 올립니다.</li>
+              <li>GitHub Pages를 오래 쓸 예정이면 GitHub Desktop을 함께 쓰면 파일 관리가 쉬워집니다.</li>
+            </ol>
+          </article>
+
+          <article class="card gold">
+            <span class="tool-icon gold" aria-hidden="true">M</span>
+            <span class="badge">Mac</span>
+            <h3>맥에서 준비하기</h3>
+            <ol>
+              <li>브라우저는 Chrome 또는 Safari를 사용할 수 있습니다. 배포 전에는 가능하면 Chrome에서도 확인합니다.</li>
+              <li>코드 편집은 Visual Studio Code 또는 Cursor를 추천합니다.</li>
+              <li>작업 폴더를 만들고 `index.html`, 이미지, PDF 파일을 한곳에 모읍니다.</li>
+              <li>Finder에서 `index.html`을 열어 화면을 확인하고, 모바일 크기에서도 글자가 읽히는지 봅니다.</li>
+              <li><span class="line-break">Codex나 Claude Code처럼 파일을 직접 다루는 도구를 쓸 경우</span><span class="line-break">작업 폴더를 명확히 지정해두면 수정 실수가 줄어듭니다.</span></li>
+            </ol>
+          </article>
+        </div>
+
+        <div class="mini-note">
+          <span class="line-break">초보자에게 가장 중요한 원칙은 하나입니다.</span>
+          <span class="line-break">웹페이지 파일, 이미지, 활동지 PDF를 한 폴더 안에서 관리하면 배포 오류가 훨씬 줄어듭니다.</span>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="section-inner">
+        <div class="callout">
+          <strong>다음에 볼 페이지</strong>
+          <span class="line-break">도구의 방향을 정했다면, AI로 첫 `index.html`을 만들어보세요.</span>
+          <span class="line-break">또는 실제 프로그램별 절차를 확인해보세요.</span>
+          <div class="actions">
+            <a class="btn" href="ai.html">AI 활용 보기</a>
+            <a class="btn" href="practice.html#practice-workbook">실습 워크북</a>
+            <a class="btn primary" href="tools.html">프로그램별 상세 가이드</a>
+            <a class="btn" href="cases.html">사례 보기</a>
+            <a class="btn" href="check.html">공개 전 점검</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-main">
+        <span class="footer-kicker">교육용 웹페이지 제작 가이드북</span>
+        <strong class="footer-title">선생님들을 위한 웹페이지 제작 도우미</strong>
+        <p>
+          <span class="line-break">웹페이지가 목적이 아니라,</span>
+          <span class="line-break">더 효과적인 수업을 위한 선택지로 사용할 수 있도록 정리했습니다.</span>
+        </p>
+      </div>
+      <div class="footer-meta">
+        <p><span>제작자</span> 전남에서 근무하는 지리과 교사</p>
+        <p><span>문의</span> <a href="mailto:28182818@naver.com">28182818@naver.com</a></p>
+      </div>
+      <a class="footer-home" href="../index.html">처음으로</a>
+    </div>
+  </footer>
+  <script src="../assets/app.js?v=20260702-8"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>응답 연결 허브 템플릿</title>
+  <style>
+    :root {
+      --bg: #f6f7f3;
+      --paper: #ffffff;
+      --ink: #1f2933;
+      --muted: #64748b;
+      --line: #dde5df;
+      --green: #256f5b;
+      --blue: #255f8f;
+      --gold: #946c1f;
+      --rose: #9b4457;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .badge {
+      display: inline-flex;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #fff2cf;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 16px 0 10px;
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.15;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 24px;
+    }
+
+    .lead {
+      color: #435363;
+      font-size: 18px;
+      max-width: 760px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .card,
+    .warning {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      padding: 18px;
+      box-shadow: 0 10px 24px rgba(31, 41, 51, 0.08);
+    }
+
+    .card strong {
+      display: block;
+      color: var(--green);
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .card p,
+    .warning p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    section {
+      margin-top: 28px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    a.button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 14px;
+      border-radius: 7px;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    a.button.secondary {
+      background: var(--paper);
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .warning {
+      background: #fbe8ec;
+      box-shadow: none;
+    }
+
+    .warning strong {
+      color: var(--rose);
+    }
+
+    @media (max-width: 760px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="badge">응답 연결 허브 템플릿</span>
+    <h1>활동 후 응답 제출 안내</h1>
+    <p class="lead">
+      이 페이지는 수업 안내와 응답 제출 도구를 연결하는 허브입니다.
+      웹페이지 안에 모든 응답을 직접 저장하지 않고, 안정적인 폼 도구로 연결하는 초보자용 방식입니다.
+    </p>
+
+    <section>
+      <h2>제출 전 확인</h2>
+      <div class="grid">
+        <article class="card">
+          <strong>1. 활동 완료</strong>
+          <p>자료를 읽고 활동지 또는 모둠 토의를 마쳤는지 확인합니다.</p>
+        </article>
+        <article class="card">
+          <strong>2. 개인정보 최소화</strong>
+          <p>이름 대신 별칭이나 모둠 번호로 제출할 수 있는지 확인합니다.</p>
+        </article>
+        <article class="card">
+          <strong>3. 제출 후 안내</strong>
+          <p>제출을 마치면 다음 활동이나 교사의 안내를 확인합니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>응답 제출하기</h2>
+      <p class="lead">아래 버튼의 `#` 자리에 Google Forms, Tally, Classroom 과제 링크를 넣으면 됩니다.</p>
+      <div class="button-row">
+        <a class="button" href="#">Google Forms 제출</a>
+        <a class="button secondary" href="#">Tally 제출</a>
+        <a class="button secondary" href="#">Classroom 과제 확인</a>
+      </div>
+    </section>
+
+    <section class="warning">
+      <strong>공개 전 점검</strong>
+      <p>
+        학생 이름, 학번, 성적, 얼굴 사진, 개별 응답 원문은 공개 화면에 넣지 않습니다.
+        응답 결과를 공유할 때는 원자료 대신 요약 통계나 익명화된 결과를 사용하세요.
+      </p>
+    </section>
+  </main>
+</body>
+</html>

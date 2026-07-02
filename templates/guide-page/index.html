@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>수업 안내 페이지 템플릿</title>
+  <style>
+    :root {
+      --bg: #f6f7f3;
+      --paper: #ffffff;
+      --ink: #1f2933;
+      --muted: #64748b;
+      --line: #dde5df;
+      --green: #256f5b;
+      --blue: #255f8f;
+      --gold: #946c1f;
+      --soft: #e6f3ee;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 48px 20px 28px;
+      background: linear-gradient(135deg, #e6f3ee, #e7f0f8);
+      border-bottom: 1px solid var(--line);
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 20px 56px;
+    }
+
+    .hero {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-flex;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 16px 0 10px;
+      font-size: clamp(30px, 5vw, 52px);
+      line-height: 1.15;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 24px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .lead {
+      max-width: 720px;
+      color: #435363;
+      font-size: 19px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 20px 0 0;
+    }
+
+    .card,
+    .notice {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      padding: 18px;
+      box-shadow: 0 10px 24px rgba(31, 41, 51, 0.08);
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--green);
+      font-size: 18px;
+    }
+
+    section {
+      margin-top: 24px;
+    }
+
+    .steps {
+      display: grid;
+      gap: 12px;
+      padding: 0;
+      list-style: none;
+      counter-reset: step;
+    }
+
+    .steps li {
+      counter-increment: step;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      padding: 16px 16px 16px 58px;
+      position: relative;
+    }
+
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: var(--green);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    a.button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 14px;
+      border-radius: 7px;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    a.button.secondary {
+      background: var(--paper);
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .notice {
+      background: var(--soft);
+      box-shadow: none;
+    }
+
+    .notice strong {
+      color: var(--green);
+    }
+
+    @media (max-width: 760px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding-top: 34px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <span class="badge">안내 페이지 템플릿</span>
+      <h1>우리 수업 안내 페이지</h1>
+      <p class="lead">
+        이 페이지는 학생이 한 주소에서 수업 목표, 활동 순서, 자료 링크, 제출 방법을 확인하도록 돕는 기본 템플릿입니다.
+      </p>
+      <div class="button-row">
+        <a class="button" href="#steps">오늘 활동 보기</a>
+        <a class="button secondary" href="#submit">제출 방법 보기</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="grid">
+        <article class="card">
+          <strong>대상</strong>
+          <p>고등학교 1학년 지리 수업</p>
+        </article>
+        <article class="card">
+          <strong>수업 목표</strong>
+          <p>자료를 읽고 지역의 특징을 근거와 함께 설명합니다.</p>
+        </article>
+        <article class="card">
+          <strong>완료 기준</strong>
+          <p>활동지를 작성하고 제출 링크로 결과를 보냅니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="steps">
+      <h2>오늘 활동 순서</h2>
+      <ol class="steps">
+        <li><strong>자료 보기</strong><br />교사가 제공한 읽기 자료와 지도를 먼저 확인합니다.</li>
+        <li><strong>핵심 질문 찾기</strong><br />자료에서 지역 차이가 드러나는 부분을 표시합니다.</li>
+        <li><strong>모둠 토의</strong><br />각자 찾은 근거를 모아 설명 문장을 만듭니다.</li>
+        <li><strong>결과 제출</strong><br />정리한 내용을 제출 폼으로 보냅니다.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>수업 자료</h2>
+      <div class="button-row">
+        <a class="button secondary" href="#">활동지 보기</a>
+        <a class="button secondary" href="#">참고 자료 보기</a>
+        <a class="button secondary" href="#">지도 자료 보기</a>
+      </div>
+    </section>
+
+    <section id="submit">
+      <h2>제출 방법</h2>
+      <div class="notice">
+        <strong>제출 전 확인</strong>
+        <p>이름, 학번, 얼굴 사진처럼 꼭 필요하지 않은 개인정보는 입력하지 않습니다. 제출 링크가 열리지 않으면 교사에게 알려주세요.</p>
+      </div>
+      <div class="button-row">
+        <a class="button" href="#">제출 폼 열기</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

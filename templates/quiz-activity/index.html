@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>퀴즈 활동 템플릿</title>
+  <style>
+    :root {
+      --bg: #f6f7f3;
+      --paper: #ffffff;
+      --ink: #1f2933;
+      --muted: #64748b;
+      --line: #dde5df;
+      --green: #256f5b;
+      --blue: #255f8f;
+      --gold: #946c1f;
+      --rose: #9b4457;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 38px 20px 60px;
+    }
+
+    .badge {
+      display: inline-flex;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #e6f3ee;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 16px 0 10px;
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.15;
+    }
+
+    .lead {
+      color: #435363;
+      font-size: 18px;
+    }
+
+    .quiz-card {
+      margin-top: 26px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      padding: 22px;
+      box-shadow: 0 14px 34px rgba(31, 41, 51, 0.1);
+    }
+
+    .question {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.35;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    button {
+      min-height: 54px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfa;
+      color: var(--ink);
+      padding: 12px;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    button:hover,
+    button:focus-visible {
+      outline: 3px solid rgba(37, 111, 91, 0.2);
+      border-color: var(--green);
+    }
+
+    .feedback {
+      min-height: 96px;
+      margin-top: 18px;
+      border-radius: 8px;
+      background: #e7f0f8;
+      padding: 16px;
+      color: #214864;
+      font-weight: 700;
+    }
+
+    .progress {
+      margin-top: 16px;
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .primary {
+      background: var(--green);
+      color: white;
+      border-color: var(--green);
+    }
+
+    .notice {
+      margin-top: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff2cf;
+      padding: 16px;
+    }
+
+    @media (max-width: 700px) {
+      .options {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="badge">상호작용 퀴즈 템플릿</span>
+    <h1>기후 개념 확인 퀴즈</h1>
+    <p class="lead">
+      학생이 버튼을 눌러 정답과 해설을 확인하는 기본 활동입니다.
+      실제 수업에서는 질문과 해설을 교과 내용에 맞게 바꾸면 됩니다.
+    </p>
+
+    <section class="quiz-card" aria-live="polite">
+      <p class="progress" id="progress">1 / 3</p>
+      <h2 class="question" id="question">기온의 연교차가 큰 지역에서 주로 나타나는 특징은?</h2>
+      <div class="options" id="options"></div>
+      <div class="feedback" id="feedback">답을 선택하면 해설이 나타납니다.</div>
+      <div class="button-row">
+        <button class="primary" type="button" id="next">다음 문제</button>
+        <button type="button" id="reset">처음부터</button>
+      </div>
+    </section>
+
+    <section class="notice">
+      <strong>수업 활용 팁</strong>
+      <p>이 템플릿은 학생 응답을 저장하지 않습니다. 결과 제출이 필요하면 마지막에 Google Forms나 Tally 링크를 연결하세요.</p>
+    </section>
+  </main>
+
+  <script>
+    const quiz = [
+      {
+        question: "기온의 연교차가 큰 지역에서 주로 나타나는 특징은?",
+        options: ["겨울과 여름의 기온 차이가 크다", "1년 내내 기온 변화가 거의 없다"],
+        answer: 0,
+        feedback: "맞습니다. 연교차는 1년 중 가장 더운 달과 가장 추운 달의 평균 기온 차이를 말합니다."
+      },
+      {
+        question: "강수량 그래프를 볼 때 먼저 확인하면 좋은 것은?",
+        options: ["비가 많이 오는 계절", "그래프의 색깔"],
+        answer: 0,
+        feedback: "맞습니다. 어느 계절에 비가 집중되는지 보면 기후 특징을 더 쉽게 파악할 수 있습니다."
+      },
+      {
+        question: "학생 응답을 나중에 다시 확인하려면 무엇이 필요할까요?",
+        options: ["저장 공간이나 제출 폼", "색이 예쁜 버튼"],
+        answer: 0,
+        feedback: "맞습니다. 화면에서 버튼이 움직이는 것과 응답이 저장되는 것은 다른 일입니다."
+      }
+    ];
+
+    let current = 0;
+    let answered = false;
+
+    const progress = document.querySelector("#progress");
+    const question = document.querySelector("#question");
+    const options = document.querySelector("#options");
+    const feedback = document.querySelector("#feedback");
+    const next = document.querySelector("#next");
+    const reset = document.querySelector("#reset");
+
+    function renderQuestion() {
+      const item = quiz[current];
+      answered = false;
+      progress.textContent = `${current + 1} / ${quiz.length}`;
+      question.textContent = item.question;
+      feedback.textContent = "답을 선택하면 해설이 나타납니다.";
+      options.innerHTML = "";
+
+      item.options.forEach((text, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = text;
+        button.addEventListener("click", () => selectAnswer(index));
+        options.appendChild(button);
+      });
+    }
+
+    function selectAnswer(index) {
+      if (answered) return;
+      answered = true;
+      const item = quiz[current];
+      feedback.textContent = index === item.answer ? item.feedback : `다시 생각해 봅시다. ${item.feedback}`;
+    }
+
+    next.addEventListener("click", () => {
+      current = (current + 1) % quiz.length;
+      renderQuestion();
+    });
+
+    reset.addEventListener("click", () => {
+      current = 0;
+      renderQuestion();
+    });
+
+    renderQuestion();
+  </script>
+</body>
+</html>
